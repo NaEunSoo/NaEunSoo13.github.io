@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이크로컨트롤러 제어 실습 | 공업고등학교 과정</title>
+    <meta name="description" content="공업고등학교 마이크로컨트롤러 제어 실습을 위한 10가지 핵심 예제 모음">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Orbitron:wght@600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-glob"></div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Micro<span>Class</span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero" class="active">나의 실습실</a></li>
+                    <li><a href="#curriculum">오늘의 수업</a></li>
+                    <li><a href="#resources">보관함</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="badge">🏫 공고생을 위한 스마트 실습실</span>
+                    <h1>마이크로컨트롤러 <span>완전 정복하기</span></h1>
+                    <p>복잡한 회로와 코드도 차근차근 배우면 어렵지 않아요.<br>우리 학교 실습에 꼭 필요한 10가지 기술을 정리했습니다.</p>
+                    <a href="#curriculum" class="cta-button">수업 시작하기 <i class="fa-solid fa-pencil"></i></a>
+                </div>
+                <div class="hero-visual">
+                    <div class="chip-graphic">
+                        <div class="pin p1"></div>
+                        <div class="pin p2"></div>
+                        <div class="pin p3"></div>
+                        <div class="core">MCU</div>
+                        <div class="pin p4"></div>
+                        <div class="pin p5"></div>
+                        <div class="pin p6"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum Grid -->
+        <section id="curriculum" class="curriculum-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>실습 커리큘럼</h2>
+                    <p>단계별로 배우는 10가지 핵심 예제</p>
+                </div>
+
+                <div class="grid-container">
+                    <!-- Example 1 -->
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-regular fa-lightbulb"></i></div>
+                        <div class="card-content">
+                            <h3>01. GPIO 출력 제어</h3>
+                            <p>가장 기초적인 LED 점멸 제어를 통해 포트 입출력의 개념을 익힙니다.</p>
+                            <button class="card-link" onclick="openModal(1)">예제 보기</button>
+                        </div>
+                    </article>
+
+                    <!-- Example 2 -->
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-toggle-on"></i></div>
+                        <div class="card-content">
+                            <h3>02. GPIO 입력 제어</h3>
+                            <p>푸시 버튼 스위치의 입력을 받아 회로를 제어하는 방법을 학습합니다.</p>
+                            <button class="card-link" onclick="openModal(2)">예제 보기</button>
+                        </div>
+                    </article>
+
+                    <!-- Example 3 -->
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-digital-tachograph"></i></div>
+                        <div class="card-content">
+                            <h3>03. 7-Segment (FND)</h3>
+                            <p>숫자를 표시하는 FND 디스플레이의 제어 원리와 다이내믹 구동을 배웁니다.</p>
+                            <button class="card-link" onclick="openModal(3)">예제 보기</button>
+                        </div>
+                    </article>
+
+                    <!-- Example 4 -->
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-font"></i></div>
+                        <div class="card-content">
+                            <h3>04. Text LCD 제어</h3>
+                            <p>문자 LCD 모듈을 초기화하고 원하는 문자열을 출력하는 실습입니다.</p>
+                            <button class="card-link" onclick="openModal(4)">예제 보기</button>
+                        </div>
+                    </article>
+
+                    <!-- Example 5 -->
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="card-content">
+                            <h3>05. 외부 인터럽트</h3>
+                            <p>하드웨어 인터럽트의 개념을 이해하고 우선순위 처리를 실습합니다.</p>
+                            <button class="card-link" onclick="openModal(5)">예제 보기</button>
+                        </div>
+                    </article>
+
+                    <!-- Example 6 -->
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-regular fa-clock"></i></div>
+                        <div class="card-content">
+                            <h3>06. 타이머/카운터</h3>
+                            <p>내부 타이머를 이용한 정확한 시간 제어와 이벤트 카운팅을 학습합니다.</p>
+                            <button class="card-link" onclick="openModal(6)">예제 보기</button>
+                        </div>
+                    </article>
+
+                    <!-- Example 7 -->
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-fan"></i></div>
+                        <div class="card-content">
+                            <h3>07. DC 모터 제어</h3>
+                            <p>트랜지스터와 H-Bridge 회로를 이용한 모터의 정/역회전 제어입니다.</p>
+                            <button class="card-link" onclick="openModal(7)">예제 보기</button>
+                        </div>
+                    </article>
+
+                    <!-- Example 8 -->
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-wave-square"></i></div>
+                        <div class="card-content">
+                            <h3>08. PWM 제어</h3>
+                            <p>펄스 폭 변조(PWM)를 이용하여 LED 밝기 조절 및 모터 속도를 제어합니다.</p>
+                            <button class="card-link" onclick="openModal(8)">예제 보기</button>
+                        </div>
+                    </article>
+
+                    <!-- Example 9 -->
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-sun"></i></div>
+                        <div class="card-content">
+                            <h3>09. ADC 센서 입력</h3>
+                            <p>조도 센서 등 아날로그 신호를 디지털 값으로 변환하여 처리합니다.</p>
+                            <button class="card-link" onclick="openModal(9)">예제 보기</button>
+                        </div>
+                    </article>
+
+                    <!-- Example 10 -->
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <div class="card-content">
+                            <h3>10. UART 통신</h3>
+                            <p>PC와 마이크로컨트롤러 간의 직렬(Serial) 통신 데이터를 송수신합니다.</p>
+                            <button class="card-link" onclick="openModal(10)">예제 보기</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 공업고등학교 마이크로컨트롤러 실습과정. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Example Modal -->
+    <div id="exampleModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <div id="modalBody">
+                <h2 id="modalTitle">예제 제목</h2>
+                <div class="modal-grid">
+                    <div class="modal-info">
+                        <h3>학습 목표</h3>
+                        <p id="modalGoal">학습 목표 내용이 여기에 들어갑니다.</p>
+                        <h3>회로 구성</h3>
+                        <p id="modalCircuit">회로 구성 설명이 여기에 들어갑니다.</p>
+                    </div>
+                    <div class="modal-code">
+                        <h3>소스 코드 (C-Language)</h3>
+                        <pre><code id="modalCode">void setup() { ... }</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const exampleData = {
+            1: {
+                title: "01. GPIO 출력 제어 (LED)",
+                goal: "마이크로컨트롤러의 기본 출력 기능을 이해하고 LED를 제어합니다.",
+                circuit: "PB.0 핀 - 저항(330Ω) - LED - GND 순으로 연결합니다.",
+                code: `#include <avr/io.h>\n#include <util/delay.h>\n\nint main(void) {\n    DDRB = 0x01; // PB0를 출력으로 설정\n    \n    while(1) {\n        PORTB = 0x01; // LED 켜기\n        _delay_ms(500);\n        PORTB = 0x00; // LED 끄기\n        _delay_ms(500);\n    }\n}`
+            },
+            2: {
+                title: "02. GPIO 입력 제어 (Button)",
+                goal: "스위치의 입력을 받아 상황에 따른 출력을 제어합니다.",
+                circuit: "스위치 한쪽은 PD.0, 다른 한쪽은 GND에 연결 (풀업 저항 사용)",
+                code: `void main() {\n    DDRB = 0xFF; // Port B를 출력으로\n    DDRD = 0x00; // Port D를 입력으로\n    \n    while(1) {\n        if(!(PIND & 0x01)) { // PD0 버튼이 눌리면\n            PORTB = 0xFF; // 모든 LED 켜기\n        } else {\n            PORTB = 0x00; // LED 끄기\n        }\n    }\n}`
+            },
+            3: {
+                title: "03. 7-Segment (FND)",
+                goal: "FND의 구조를 이해하고 숫자를 출력하는 코드를 작성합니다.",
+                circuit: "각 세그먼트 A-G를 Port C의 0-6번 핀에 저항과 함께 연결합니다.",
+                code: `unsigned char digit[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x27, 0x7F, 0x6F};\n\nvoid main() {\n    DDRC = 0xFF;\n    while(1) {\n        for(int i=0; i<10; i++) {\n            PORTC = digit[i];\n            _delay_ms(1000);\n        }\n    }\n}`
+            },
+            4: {
+                title: "04. Text LCD 제어",
+                goal: "LCD 드라이버 명령어를 통해 텍스트를 디스플레이합니다.",
+                circuit: "RS, RW, E핀과 데이터 8비트 혹은 4비트를 MCU 포트에 연결합니다.",
+                code: `void LCD_string(char *str) {\n    while(*str) {\n        LCD_data(*str++);\n    }\n}\n\nvoid main() {\n    LCD_init();\n    LCD_string("Hello MCU!");\n    while(1);\n}`
+            },
+            5: {
+                title: "05. 외부 인터럽트",
+                goal: "메인 루프 작업 중 돌발 상황(버튼)에 즉각 반응합니다.",
+                circuit: "INT0 핀(PD2)에 버튼을 연결하여 하강 에지를 감지합니다.",
+                code: `ISR(INT0_vect) {\n    PORTB ^= 0xFF; // LED 상태 반전\n}\n\nvoid main() {\n    EIMSK = 0x01; // INT0 활성화\n    EICRA = 0x02; // falling edge\n    sei(); // 전역 인터럽트 허용\n    while(1);\n}`
+            },
+            6: {
+                title: "06. 타이머/카운터",
+                goal: "정확한 시간 간격으로 특정 작업을 수행합니다.",
+                circuit: "별도의 회로 없이 내부 클록을 사용하여 시간을 계산합니다.",
+                code: `ISR(TIMER0_OVF_vect) {\n    cnt++;\n    if(cnt == 100) {\n        PORTB ^= 0x01;\n        cnt = 0;\n    }\n}\n\nvoid main() {\n    TCCR0 = 0x07; // Prescaler 1024\n    TIMSK = 0x01; // Overflow 인터럽트\n    sei();\n    while(1);\n}`
+            },
+            7: {
+                title: "07. DC 모터 제어",
+                goal: "MCU의 낮은 전류로 높은 모터 전류를 제어하는 원리를 배웁니다.",
+                circuit: "MCU 핀 - L298N 혹은 L293D 드라이버 - DC 모터 연결",
+                code: `void motor_forward() {\n    PORTB = 0x05; // IN1=High, IN2=Low\n}\n\nvoid motor_stop() {\n    PORTB = 0x00;\n}\n\nvoid main() {\n    DDRB = 0x0F;\n    motor_forward();\n    while(1);\n}`
+            },
+            8: {
+                title: "08. PWM 제어",
+                goal: "평균 전압을 조절하여 LED 밝기나 모터 속도를 제어합니다.",
+                circuit: "OC1A(PB5) 핀에 출력을 연결하여 파형을 확인합니다.",
+                code: `void PWM_init() {\n    TCCR1A = 0x81; // 8-bit Fast PWM\n    TCCR1B = 0x09; // CS=1\n}\n\nvoid main() {\n    PWM_init();\n    while(1) {\n        for(int i=0; i<255; i++) {\n            OCR1A = i;\n            _delay_ms(10);\n        }\n    }\n}`
+            },
+            9: {
+                title: "09. ADC 센서 입력",
+                goal: "현실 세계의 물리 값을 숫자로 변환합니다.",
+                circuit: "가변저항 혹은 CDS 광센서를 ADC0(PA0) 핀에 연결합니다.",
+                code: `int read_adc(unsigned char ch) {\n    ADMUX = (1<<REFS0) | ch;\n    ADCSRA |= (1<<ADSC);\n    while(!(ADCSRA & (1<<ADIF)));\n    return ADC;\n}\n\nvoid main() {\n    ADCSRA = 0x87; // ADC Enable\n    while(1) {\n        int val = read_adc(0);\n        // val 값에 따라 동작\n    }\n}`
+            },
+            10: {
+                title: "10. UART 통신",
+                goal: "PC 터미널로 데이터를 보내거나 명령을 받습니다.",
+                circuit: "MCU의 TX, RX선을 USB-to-UART 모듈에 연결합니다.",
+                code: `void UART_transmit(char data) {\n    while(!(UCSR0A & (1<<UDRE0)));\n    UDR0 = data;\n}\n\nvoid main() {\n    UART_init(9600);\n    UART_transmit('A');\n    while(1);\n}`
+            }
+        };
+
+        function openModal(id) {
+            const data = exampleData[id];
+            document.getElementById('modalTitle').innerText = data.title;
+            document.getElementById('modalGoal').innerText = data.goal;
+            document.getElementById('modalCircuit').innerText = data.circuit;
+            document.getElementById('modalCode').innerText = data.code;
+
+            document.getElementById('exampleModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // prevent scroll
+        }
+
+        function closeModal() {
+            document.getElementById('exampleModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on outside click
+        window.onclick = function (event) {
+            const modal = document.getElementById('exampleModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+
+</html>
